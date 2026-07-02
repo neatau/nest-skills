@@ -74,6 +74,7 @@ module's `providers` array — do **not** add a provider file.
      `exports` if other modules use it).
    - **FactoryProvider needed:** add `<name>.service.types.ts` (with
      `<Name>ServiceOptions` if config is involved) and `<name>.service.provider.ts`.
+     Type the provider as `FactoryProvider<<Name>Service>` (from `@nestjs/common`).
      In the factory, read `ConfigService`/build clients/await async setup, then
      `return new <Name>Service(options, ...deps)`. Register the *provider* in the
      module (`provide` is the class token); export the class token if needed.

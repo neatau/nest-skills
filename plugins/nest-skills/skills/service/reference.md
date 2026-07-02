@@ -83,14 +83,14 @@ export class ArticleService {
 `news/services/article/article.service.provider.ts`
 
 ```ts
-import { Provider } from '@nestjs/common';
+import { FactoryProvider } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 import { ArticleRepository } from '../../repositories/article.repository';
 import { ArticleService } from './article.service';
 import { ArticleServiceOptions } from './article.service.types';
 
-export const ArticleServiceProvider: Provider = {
+export const ArticleServiceProvider: FactoryProvider<ArticleService> = {
   provide: ArticleService,
   inject: [ConfigService, ArticleRepository],
   useFactory: async (config: ConfigService, repository: ArticleRepository) => {
