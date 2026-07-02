@@ -1,0 +1,9 @@
+{
+  "name": "nest-skills",
+  "description": "Skills for building and maintaining NestJS applications across codebases.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Neat",
+    "email": "marty@neat.au"
+  }
+}
